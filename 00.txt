@@ -1,0 +1,32 @@
+
+to: akashmaji945@gmail.com
+from: elon@x.com
+subject: hello from musk
+
+# in terminal
+ ⚡akash ❯❯  host -t mx iisc.ac.in
+# in stdout
+iisc.ac.in mail is handled by 0 iisc-ac-in.mail.protection.outlook.com.
+
+# run
+ ⚡akash ❯❯  host -t a iisc-ac-in.mail.protection.outlook.com
+# see
+iisc-ac-in.mail.protection.outlook.com has address 52.101.145.0
+iisc-ac-in.mail.protection.outlook.com has address 52.101.145.2
+iisc-ac-in.mail.protection.outlook.com has address 52.101.144.3
+iisc-ac-in.mail.protection.outlook.com has address 52.101.144.0
+
+# cmd
+ ⚡akash ❯❯  host -t mx gmail.com
+# see
+gmail.com mail is handled by 5 gmail-smtp-in.l.google.com.
+gmail.com mail is handled by 20 alt2.gmail-smtp-in.l.google.com.
+gmail.com mail is handled by 40 alt4.gmail-smtp-in.l.google.com.
+gmail.com mail is handled by 30 alt3.gmail-smtp-in.l.google.com.
+gmail.com mail is handled by 10 alt1.gmail-smtp-in.l.google.com.
+
+# cmd
+ ⚡akash ❯❯ host -t a gmail-smtp-in.l.google.com
+# see
+gmail-smtp-in.l.google.com has address 74.125.68.26
+
