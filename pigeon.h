@@ -55,5 +55,6 @@ typedef struct s_server Server;
 
 
 bool sendEmail(Email* email, Server* server);
+bool sendMailHelper(char* from_addr, char* server_addr, char* server_ip);
 
 int main(int,char**); 

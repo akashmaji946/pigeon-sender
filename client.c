@@ -44,7 +44,8 @@ bool sendEmail(Email* email, Server* server){
 
 }
 
-void sendMailHelper(char* from_addr, char* server_addr, char* ip){
+bool sendMailHelper(char* from_addr, char* server_addr, char* server_ip){
+    
     Email* email;
     Server* server;
 
@@ -57,21 +58,32 @@ void sendMailHelper(char* from_addr, char* server_addr, char* ip){
     strncpy(email->src, from_addr, 63);
     email->domain = email->src + 13;
     strncpy(server->server, server_addr, 63);
-    server->ip = inet_addr(ip);
+    server->ip = inet_addr(server_ip);
+
     printf("______________Calling_______________\n");
     bool ret = sendEmail(email, server);
+    printf("______________Success_______________\n");
+
+    // free 
     free(email);
     free(server);
 
-    printf("______________Success_______________\n");
+    return ret;
 
 }
+
+// we will connect to this email server at port and with the ip
+// telnet smtp.gmail.com 587
+// host -t a smtp.gmail.com
 
 // will be removed later
 int main(int argc, char* argv[]){
 
     sendMailHelper("akashmaji945@gmail.com", 
-    "smtp.gmail.com", "142.251.12.109");
+                   "smtp.gmail.com", 
+                   "142.251.12.109");
+
+    
 
     return 0;
 }
